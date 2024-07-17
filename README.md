@@ -31,10 +31,11 @@ You will be using your previous codebase from the Unity 1 project as your starti
 ## ***Resources***
 ### ***Core:***
 
-[Unity Manual: 2D Game Development](https://docs.unity3d.com/Manual/Unity2D.html)
-[Unity Manual: Unity UI](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/index.html)
+[Unity Manual: 2D Game Development](https://docs.unity3d.com/Manual/Unity2D.html)\
+[Unity Manual: Unity UI](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/index.html)\
 [Unity Manual: Physics 2D Reference](https://docs.unity3d.com/Manual/Physics2DReference.html)
-Starting Unity Package:
+
+## ***Starting Unity Package:***
 
 [Starter Codebase](https://drive.google.com/file/d/1B17IH5RP-MAEZWMTHAVtM6bWc-5AxLum/view)
 
