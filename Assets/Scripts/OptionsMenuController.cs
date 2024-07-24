@@ -1,41 +1,61 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using TMPro;
 
 public class OptionsMenuController : MonoBehaviour
 {
     public Slider masterVolumeSlider;
     public Slider musicVolumeSlider;
     public Slider sfxVolumeSlider;
-    public Toggle aiToggle;
+    public Toggle enableAIToggle;
 
-    private void Start()
+    void Start()
     {
-        // Load saved settings
+        // Initialize sliders and toggles with saved values or defaults
         masterVolumeSlider.value = PlayerPrefs.GetFloat("MasterVolume", 1f);
         musicVolumeSlider.value = PlayerPrefs.GetFloat("MusicVolume", 1f);
         sfxVolumeSlider.value = PlayerPrefs.GetFloat("SFXVolume", 1f);
-        aiToggle.isOn = PlayerPrefs.GetInt("AIEnabled", 1) == 1;
+        enableAIToggle.isOn = PlayerPrefs.GetInt("EnableAI", 1) == 1;
     }
 
-    public void ApplySettings()
+    public void SetMasterVolume(float volume)
     {
-        // Save settings
-        PlayerPrefs.SetFloat("MasterVolume", masterVolumeSlider.value);
-        PlayerPrefs.SetFloat("MusicVolume", musicVolumeSlider.value);
-        PlayerPrefs.SetFloat("SFXVolume", sfxVolumeSlider.value);
-        PlayerPrefs.SetInt("AIEnabled", aiToggle.isOn ? 1 : 0);
-
-        // Apply settings in-game (e.g., update audio mixer, etc.)
+        AudioListener.volume = volume;
+        PlayerPrefs.SetFloat("MasterVolume", volume);
     }
 
-    public void Back()
+    public void SetMusicVolume(float volume)
     {
-        // Logic to go back to the previous menu
+        // Set the music volume in your audio manager
+        // AudioManager.Instance.SetMusicVolume(volume);
+        PlayerPrefs.SetFloat("MusicVolume", volume);
     }
 
-    public void Exit()
+    public void SetSFXVolume(float volume)
+    {
+        // Set the SFX volume in your audio manager
+        // AudioManager.Instance.SetSFXVolume(volume);
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+    }
+
+    public void ToggleAI(bool isEnabled)
+    {
+        PlayerPrefs.SetInt("EnableAI", isEnabled ? 1 : 0);
+        // Handle enabling or disabling AI in your game logic
+    }
+
+    public void ApplyChanges()
+    {
+        // Apply changes (already saved in PlayerPrefs in this case)
+        // You can add additional logic if needed
+    }
+
+    public void BackToMainMenu()
+    {
+        // Load main menu scene or close options menu
+        // SceneManager.LoadScene("MainMenu");
+    }
+
+    public void ExitGame()
     {
         Application.Quit();
     }

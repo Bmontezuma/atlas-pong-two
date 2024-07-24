@@ -9,9 +9,30 @@ EditorBuildSettings:
     path: Assets/SceneTwo/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/SceneTwo/MainMenu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: 91cf78f90f19fb443a34bee4073b2a24
   - enabled: 1
-    path: Assets/SceneTwo/Credits.unity
-    guid: 13419eaa790d7f845bf2bd805895a65e
+    path: Assets/Scenes/Options.unity
+    guid: 3c91245c072098b4d923fb76f6523988
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: edd1ffa4e4d645c4393adf201a6dfbab
+  - enabled: 1
+    path: Assets/Scenes/Level.unity
+    guid: b291ade4d1f6d9c4c9b5f94b0f47bafd
+  - enabled: 1
+    path: Assets/Scenes/Space.unity
+    guid: 4ea1e267d93766c4eb8cba13c4a90b8b
+  - enabled: 1
+    path: Assets/Scenes/Soccer.unity
+    guid: 457c96d1d9920b243a14c008a2a53ebc
+  - enabled: 1
+    path: Assets/Scenes/Basketball.unity
+    guid: d52cf5990c341814d9e2646032c9cc5f
+  - enabled: 1
+    path: Assets/Scenes/Football.unity
+    guid: 38dac4eaca59b0347a4244e51c01f463
+  - enabled: 1
+    path: Assets/Scenes/Neon.unity
+    guid: 1e34c96f9ed4cac44b177be7228e0e42
   m_configObjects: {}
