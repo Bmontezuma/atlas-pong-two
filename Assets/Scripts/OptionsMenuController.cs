@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class OptionsMenuController : MonoBehaviour
 {
@@ -46,13 +48,12 @@ public class OptionsMenuController : MonoBehaviour
     public void ApplyChanges()
     {
         // Apply changes (already saved in PlayerPrefs in this case)
-        // You can add additional logic if needed
     }
 
     public void BackToMainMenu()
     {
         // Load main menu scene or close options menu
-        // SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void ExitGame()
